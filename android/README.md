@@ -1,4 +1,4 @@
-## Bunch of Useful scripts  
+## Bunch of Useful Shell Scripts  
 **Topics**
 - Android 
 - SMTP  
