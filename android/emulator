@@ -1,0 +1,12 @@
+#!/bin/bash
+
+IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
+
+
+# EMULATOR=~/bin/android/emulator/ is the path the android emuatlor 
+#  emulator_real is the original emulator that your renamed to emulator_real and this script takes over as emaultor 
+# at this point Android studtio gets all it wants and you get to push the hosts file as the system partition now wriateable after 
+# -writable-system paramter clubbed with **adb remount** command.
+**
+EMULATOR=~/bin/android/emulator/emulator_real
+$EMULATOR  -writable-system -dns-server "$IP,8.8.8.8,8.8.4.4" "$@"
